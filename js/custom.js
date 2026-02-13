@@ -38,8 +38,8 @@ jQuery(function($) {
         autoplaySpeed: 2000,
         slidesToShow: 2,
         slidesToScroll: 1,
-        prevArrow: '<div class="prev-arrow px-1 bg-secondary text-white"><i class="fa fa-caret-left fa-2x" aria-hidden="true"></i></div>',
-        nextArrow: '<div class="next-arrow px-1 bg-secondary text-white"><i class="fa fa-caret-right fa-2x" aria-hidden="true"></i></div>',
+        prevArrow: '<div class="prev-arrow px-1 text-white"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="28" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16" aria-hidden="true"><path d="M10 12V4l-6 4z"/></svg></div>',
+        nextArrow: '<div class="next-arrow px-1 text-white"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="28" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16" aria-hidden="true"><path d="m6 12 6-4-6-4z"/></svg></div>',
         responsive: [
           {
             breakpoint: 1024,

@@ -37,7 +37,7 @@ defined('ABSPATH') || exit;
 
     <footer class="entry-footer">
         <div class="pb-3">
-            <?php edit_post_link(__('Edit', 'justg'), '<span class="edit-link"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> ', '</span>'); ?>
+            <?php edit_post_link(__('Edit', 'justg'), '<span class="edit-link">' . velocity_child_icon_svg('pencil-square', 'me-1') . ' ', '</span>'); ?>
         </div>
     </footer><!-- .entry-footer -->
 

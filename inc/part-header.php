@@ -1,4 +1,4 @@
-<div class=" first-head-part bg-color-theme d-md-block d-none">
+<div class=" top-strip-part bg-color-theme d-md-block d-none">
     <div class="row m-0 align-items-center">
         <div class="col-md-2">
             <div class="text-center bg-light text-muted"><small><?php echo do_shortcode('[velocity-date]'); ?></small></div>
@@ -38,14 +38,16 @@
     </div>
 </div>
 
-<div class="head-part-top">
-    <div class="row m-0 py-2 align-items-center">
-        <div class="col-md-3">
-            <div class="text-center text-md-start">
-                <?php echo the_custom_logo(); ?>
+<div class="top-brand-row">
+    <div class="row py-2 align-items-center">
+        <?php if(has_custom_logo()) : ?>
+            <div class="col-md-3 pe-md-0 mb-2 mb-md-0">
+                <div class="text-center text-md-start">
+                    <?php echo the_custom_logo(); ?>
+                </div>
             </div>
-        </div>
-        <div class="col-md-9">
+        <?php endif; ?>
+        <div class="col-md">
             <?php echo get_berita_iklan('iklan_header'); ?>
         </div>
     </div>
@@ -92,7 +94,7 @@
                 </div>
                 <div class="d-inline-block">
                     <button type="submit" class="btn btn-link bg-color-theme rounded-0 text-secondary text-white px-3 py-1">
-                        <i class="fa fa-search"></i>
+                        <?php echo velocity_child_icon_svg('search'); ?>
                     </button>
                 </div>
             </form>
@@ -108,7 +110,7 @@
                 <?php esc_html_e('Main Navigation', 'justg'); ?>
             </h2>
 
-            <div class="head-part-menu navbar-dark">
+            <div class="menu-shell navbar-dark">
                 <div class="menu-header">
                     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarNavOffcanvas" aria-controls="navbarNavOffcanvas" aria-expanded="false" aria-label="<?php esc_attr_e('Toggle navigation', 'justg'); ?>">
                         <span class="navbar-toggler-icon"></span>

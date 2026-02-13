@@ -44,7 +44,7 @@ if (!function_exists('justg_right_sidebar_check')) {
         if (!is_active_sidebar('main-sidebar')) {
             return;
         }
-        echo '<div class="right-sidebar velocity-widget widget-area px-2 col-sm-12 col-md-4 order-3" id="right-sidebar" role="complementary">';
+        echo '<div class="right-sidebar velocity-widget widget-area ps-md-2 col-sm-12 col-md-4 order-3" id="right-sidebar" role="complementary">';
         echo '<div class="sticky-top">';
         do_action('justg_before_main_sidebar');
         dynamic_sidebar('main-sidebar');

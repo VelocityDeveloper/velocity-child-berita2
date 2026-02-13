@@ -22,7 +22,7 @@ $container         = velocitytheme_option('justg_container_type', 'container');
 
     <div class="<?php echo esc_attr($container); ?>" id="content">
 
-        <div class="row m-0">
+        <div class="row">
             <?php do_action('justg_before_content'); ?>
 
             <main class="site-main" id="main" role="main">

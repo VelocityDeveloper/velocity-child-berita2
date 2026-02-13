@@ -112,11 +112,9 @@ class Posts_Berita_2_Widget extends WP_Widget
             ];
         }
         if ($urutkan == 'popular') {
-            $args_post['orderby'] = 'meta_value_num';
-            $args_post['meta_key'] = 'hit';
+            $args_post['orderby'] = 'comment_count';
+            $args_post['order'] = 'DESC';
         }
-
-        $posts = new WP_Query($args_post);
 
         module_vdposts($args_post, 'posts' . $style);
 

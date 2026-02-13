@@ -74,8 +74,8 @@ class Tabs_Berita_2_Widget extends WP_Widget
                     array(
                         'post_type'         => 'post',
                         'posts_per_page'    => 3,
-                        'meta_key'          => 'hit',
-                        'orderby'           => 'meta_value_num',
+                        'orderby'           => 'comment_count',
+                        'order'             => 'DESC',
                     )
                 );
                 // The Loop
@@ -86,13 +86,13 @@ class Tabs_Berita_2_Widget extends WP_Widget
                         echo '<div class="tabpopular-post-item bg-light mb-2">';
                         echo '<div class="row">';
                         echo '<div class="col-4">';
-                        if (has_post_thumbnail()) {
-                            echo '<img class="" src="' . wp_get_attachment_thumb_url(get_post_thumbnail_id()) . '" loading="lazy"/>';
-                        }
+                        echo '<div class="ratio ratio-4x3">';
+                        echo velocity_child_post_thumbnail_html(['size' => 'thumbnail']);
+                        echo '</div>';
                         echo '</div>';
                         echo '<div class="col-8 ps-0">';
                         echo '<h6 class="m-0"><a class="fw-bold" href="' . get_the_permalink() . '">' . vdberita_limit_text(get_the_title(), 6) . '</a></h6>';
-                        echo '<div class="text-muted"><small><i class="fa fa-calendar"></i> ' . get_the_date() . ' / <i class="fa fa-eye"></i> ' . do_shortcode('[vdhit]') . '</small></div>';
+                        echo '<div class="text-muted">' . velocity_child_post_meta_html() . '</div>';
                         echo '</div>';
                         echo '</div>';
                         echo '</div>';
@@ -129,7 +129,7 @@ class Tabs_Berita_2_Widget extends WP_Widget
                         echo '</div>';
                         echo '<div class="col">';
                         echo '<a class="fw-bold" href="' . get_the_permalink() . '">' . get_the_title() . '</a>';
-                        echo '<div class="text-muted"><small><i class="fa fa-calendar"></i> ' . get_the_date() . '</small></div>';
+                        echo '<div class="text-muted">' . velocity_child_post_meta_html('j F Y', false) . '</div>';
                         echo '</div>';
                         echo '</div>';
                         echo '</div>';

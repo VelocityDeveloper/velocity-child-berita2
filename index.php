@@ -45,22 +45,10 @@ $container = velocitytheme_option('justg_container_type', 'container');
                                 <div class="slideshow-post-item carousel-item  <?php echo ($nm == 1 ? 'active' : ''); ?>">
                                     <a class="d-block position-relative" href="<?php echo get_the_permalink(); ?>">
                                         <div class="d-none d-md-block ratio ratio-16x9 bg-light overflow-hidden">
-                                            <?php
-                                            if (has_post_thumbnail()) {
-                                                $img_atr = wp_get_attachment_image_src(get_post_thumbnail_id(), 'large');
-                                                echo '<img class="w-100" src="' . $img_atr[0] . '" alt="' . get_the_title() . '" loading="lazy">';
-                                            } else {
-                                                echo '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 60 60" style="background-color: #ececec;width: 100%;height: auto;enable-background:new 0 0 60 60;" xml:space="preserve" width="' . $width . '" height="' . $height . '"><g><g><path d="M55.201,15.5h-8.524l-4-10H17.323l-4,10H12v-5H6v5H4.799C2.152,15.5,0,17.652,0,20.299v29.368   C0,52.332,2.168,54.5,4.833,54.5h50.334c2.665,0,4.833-2.168,4.833-4.833V20.299C60,17.652,57.848,15.5,55.201,15.5z M8,12.5h2v3H8   V12.5z M58,49.667c0,1.563-1.271,2.833-2.833,2.833H4.833C3.271,52.5,2,51.229,2,49.667V20.299C2,18.756,3.256,17.5,4.799,17.5H6h6   h2.677l4-10h22.646l4,10h9.878c1.543,0,2.799,1.256,2.799,2.799V49.667z" data-original="#000000" class="active-path" data-old_color="#000000" fill="#5F7D95"/><path d="M30,14.5c-9.925,0-18,8.075-18,18s8.075,18,18,18s18-8.075,18-18S39.925,14.5,30,14.5z M30,48.5c-8.822,0-16-7.178-16-16   s7.178-16,16-16s16,7.178,16,16S38.822,48.5,30,48.5z" data-original="#000000" class="active-path" data-old_color="#000000" fill="#5F7D95"/><path d="M30,20.5c-6.617,0-12,5.383-12,12s5.383,12,12,12s12-5.383,12-12S36.617,20.5,30,20.5z M30,42.5c-5.514,0-10-4.486-10-10   s4.486-10,10-10s10,4.486,10,10S35.514,42.5,30,42.5z" data-original="#000000" class="active-path" data-old_color="#000000" fill="#5F7D95"/><path d="M52,19.5c-2.206,0-4,1.794-4,4s1.794,4,4,4s4-1.794,4-4S54.206,19.5,52,19.5z M52,25.5c-1.103,0-2-0.897-2-2s0.897-2,2-2   s2,0.897,2,2S53.103,25.5,52,25.5z" data-original="#000000" class="active-path" data-old_color="#000000" fill="#5F7D95"/></g></g> </svg>';
-                                            } ?>
+                                            <?php echo velocity_child_post_thumbnail_html(['size' => 'large', 'linked' => false]); ?>
                                         </div>
                                         <div class="d-md-none d-block ratio ratio-4x3 bg-light overflow-hidden">
-                                            <?php
-                                            if (has_post_thumbnail()) {
-                                                $img_atr = wp_get_attachment_image_src(get_post_thumbnail_id(), 'large');
-                                                echo '<img class="w-100" src="' . $img_atr[0] . '" alt="' . get_the_title() . '" loading="lazy">';
-                                            } else {
-                                                echo '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 60 60" style="background-color: #ececec;width: 100%;height: auto;enable-background:new 0 0 60 60;" xml:space="preserve" width="' . $width . '" height="' . $height . '"><g><g><path d="M55.201,15.5h-8.524l-4-10H17.323l-4,10H12v-5H6v5H4.799C2.152,15.5,0,17.652,0,20.299v29.368   C0,52.332,2.168,54.5,4.833,54.5h50.334c2.665,0,4.833-2.168,4.833-4.833V20.299C60,17.652,57.848,15.5,55.201,15.5z M8,12.5h2v3H8   V12.5z M58,49.667c0,1.563-1.271,2.833-2.833,2.833H4.833C3.271,52.5,2,51.229,2,49.667V20.299C2,18.756,3.256,17.5,4.799,17.5H6h6   h2.677l4-10h22.646l4,10h9.878c1.543,0,2.799,1.256,2.799,2.799V49.667z" data-original="#000000" class="active-path" data-old_color="#000000" fill="#5F7D95"/><path d="M30,14.5c-9.925,0-18,8.075-18,18s8.075,18,18,18s18-8.075,18-18S39.925,14.5,30,14.5z M30,48.5c-8.822,0-16-7.178-16-16   s7.178-16,16-16s16,7.178,16,16S38.822,48.5,30,48.5z" data-original="#000000" class="active-path" data-old_color="#000000" fill="#5F7D95"/><path d="M30,20.5c-6.617,0-12,5.383-12,12s5.383,12,12,12s12-5.383,12-12S36.617,20.5,30,20.5z M30,42.5c-5.514,0-10-4.486-10-10   s4.486-10,10-10s10,4.486,10,10S35.514,42.5,30,42.5z" data-original="#000000" class="active-path" data-old_color="#000000" fill="#5F7D95"/><path d="M52,19.5c-2.206,0-4,1.794-4,4s1.794,4,4,4s4-1.794,4-4S54.206,19.5,52,19.5z M52,25.5c-1.103,0-2-0.897-2-2s0.897-2,2-2   s2,0.897,2,2S53.103,25.5,52,25.5z" data-original="#000000" class="active-path" data-old_color="#000000" fill="#5F7D95"/></g></g> </svg>';
-                                            } ?>
+                                            <?php echo velocity_child_post_thumbnail_html(['size' => 'large', 'linked' => false]); ?>
                                         </div>
                                         <div class="carousel-caption text-start bg-darkopacity p-2">
                                             <h6 class="title-carousel fw-bold text-white text-shadow"><?php echo vdberita_limit_text(get_the_title(), 10); ?></h6>
@@ -102,11 +90,7 @@ $container = velocitytheme_option('justg_container_type', 'container');
                         $posts_query2->the_post(); ?>
                         <div class="position-relative">
                             <div class="ratio ratio-16x9">
-                                <?php if (has_post_thumbnail()) : ?>
-                                    <a href="<?php echo get_the_permalink(); ?>">
-                                        <img src="<?php echo wp_get_attachment_image_url(get_post_thumbnail_id(), 'full'); ?>" alt="" loading="lazy">
-                                    </a>
-                                <?php endif; ?>
+                                <?php echo velocity_child_post_thumbnail_html(); ?>
                             </div>
                             <div class="post-text position-absolute bg-darkopacity start-0 bottom-0 p-3">
                                 <h6 class="m-0">
@@ -143,7 +127,7 @@ $container = velocitytheme_option('justg_container_type', 'container');
     </div>
 
     <div class="<?php echo esc_attr($container); ?>" id="content" tabindex="-1">
-        <div class="row m-0">
+        <div class="row">
             <!-- Do the left sidebar check -->
             <?php do_action('justg_before_content'); ?>
 
@@ -152,63 +136,77 @@ $container = velocitytheme_option('justg_container_type', 'container');
                 <main class="site-main col order-2" id="main">
 
                     <?php
-                    $highlight_title  = velocitytheme_option('title_posts_highlight', 'Recent Posts');
-                    $highlight_cat  = velocitytheme_option('cat_posts_highlight');
+                    $highlight_title = velocitytheme_option('title_posts_highlight', 'Recent Posts');
+                    $highlight_title = $highlight_title ? $highlight_title : 'Recent Posts';
+                    $highlight_cat = absint(velocitytheme_option('cat_posts_highlight'));
+                    $highlight_cat_link = $highlight_cat ? get_category_link($highlight_cat) : '';
                     ?>
                     <div class="post-hightlight">
                         <h4 class="widget-title velocity-title text-white mb-3">
-                            <?php if ($highlight_cat) : ?>
-                                <span class="d-inline-block bg-color-theme py-1 px-3">
-                                    <a class="text-white" href="<?php echo get_tag_link($highlight_cat); ?>"><?php echo $highlight_title; ?></a>
-                                </span>
-                            <?php endif; ?>
+                            <span class="d-inline-block bg-color-theme py-1 px-3">
+                                <?php if ($highlight_cat && !is_wp_error($highlight_cat_link)) : ?>
+                                    <a class="text-white" href="<?php echo esc_url($highlight_cat_link); ?>"><?php echo esc_html($highlight_title); ?></a>
+                                <?php else : ?>
+                                    <?php echo esc_html($highlight_title); ?>
+                                <?php endif; ?>
+                            </span>
                         </h4>
                         <div class="part-hightlight">
-                            <div class="part-carousel-home">
+                            <div class="part-carousel-home bg-muted">
                                 <?php
                                 $highlight_args = array(
                                     'post_type' => 'post',
-                                    'cat'       => $highlight_cat,
                                     'posts_per_page' => 8,
                                 );
+                                if ($highlight_cat) {
+                                    $highlight_args['cat'] = $highlight_cat;
+                                }
                                 module_vdposts($highlight_args, 'carousel'); ?>
                             </div>
                         </div>
                     </div>
 
                     <?php
-                    $post1_title    = velocitytheme_option('title_posts_home_1', 'Recent Posts');
-                    $post1_cat      = velocitytheme_option('cat_posts_home_1');
+                    $post1_title = velocitytheme_option('title_posts_home_1', 'Recent Posts');
+                    $post1_title = $post1_title ? $post1_title : 'Recent Posts';
+                    $post1_cat = absint(velocitytheme_option('cat_posts_home_1'));
+                    $post1_cat_link = $post1_cat ? get_category_link($post1_cat) : '';
                     ?>
                     <div class="part-posts-home-1 pt-3">
                         <h4 class="widget-title velocity-title text-white mb-3">
-                            <?php if ($post1_cat) : ?>
-                                <span class="d-inline-block bg-color-theme py-1 px-3">
-                                    <a class="text-white" href="<?php echo get_tag_link($post1_cat); ?>"><?php echo $post1_title; ?></a>
-                                </span>
-                            <?php endif; ?>
+                            <span class="d-inline-block bg-color-theme py-1 px-3">
+                                <?php if ($post1_cat && !is_wp_error($post1_cat_link)) : ?>
+                                    <a class="text-white" href="<?php echo esc_url($post1_cat_link); ?>"><?php echo esc_html($post1_title); ?></a>
+                                <?php else : ?>
+                                    <?php echo esc_html($post1_title); ?>
+                                <?php endif; ?>
+                            </span>
                         </h4>
 
                         <div class="part_posts_home_1">
-                            <div class="row m-0">
-                                <div class="col-md-6 px-1">
+                            <div class="row">
+                                <div class="col-md-6 pe-md-1">
                                     <?php
                                     $post1_args = array(
                                         'post_type' => 'post',
-                                        'cat'       => $post1_cat,
                                         'posts_per_page' => 1,
                                     );
+                                    if ($post1_cat) {
+                                        $post1_args['cat'] = $post1_cat;
+                                    }
                                     module_vdposts($post1_args, 'posts1');
                                     ?>
                                 </div>
-                                <div class="col-md-6 px-1">
+                                <div class="col-md-6 ps-md-1">
                                     <?php
                                     $post1_args = array(
                                         'post_type' => 'post',
-                                        'cat'       => $post1_cat,
                                         'posts_per_page' => 5,
                                         'offset' => 1,
                                     );
+                                    if ($post1_cat) {
+                                        $post1_args['cat'] = $post1_cat;
+                                    }
                                     module_vdposts($post1_args, 'posts2');
                                     ?>
                                 </div>
@@ -217,39 +215,47 @@ $container = velocitytheme_option('justg_container_type', 'container');
                     </div>
 
                     <?php
-                    $post2_title    = velocitytheme_option('title_posts_home_2', 'Recent Posts');
-                    $post2_cat      = velocitytheme_option('cat_posts_home_2');
+                    $post2_title = velocitytheme_option('title_posts_home_2', 'Recent Posts');
+                    $post2_title = $post2_title ? $post2_title : 'Recent Posts';
+                    $post2_cat = absint(velocitytheme_option('cat_posts_home_2'));
+                    $post2_cat_link = $post2_cat ? get_category_link($post2_cat) : '';
                     ?>
                     <div class="part_posts_home_2 py-2">
                         <h4 class="widget-title velocity-title text-white mb-3">
-                            <?php if ($post2_cat) : ?>
-                                <span class="d-inline-block bg-color-theme py-1 px-3">
-                                    <a class="text-white" href="<?php echo get_tag_link($post2_cat); ?>"><?php echo $post2_title; ?></a>
-                                </span>
-                            <?php endif; ?>
+                            <span class="d-inline-block bg-color-theme py-1 px-3">
+                                <?php if ($post2_cat && !is_wp_error($post2_cat_link)) : ?>
+                                    <a class="text-white" href="<?php echo esc_url($post2_cat_link); ?>"><?php echo esc_html($post2_title); ?></a>
+                                <?php else : ?>
+                                    <?php echo esc_html($post2_title); ?>
+                                <?php endif; ?>
+                            </span>
                         </h4>
 
-                        <div class="row m-0">
-                            <div class="col-md-6 px-1">
-                                <div class="part-post-home-2 py-2">
+                        <div class="row">
+                            <div class="col-md-6 pe-md-1">
+                                <div class="part-post-home-2 pb-2">
                                     <?php
                                     $post2_args = array(
                                         'post_type' => 'post',
-                                        'cat'       => $post2_cat,
                                         'posts_per_page' => 1,
                                     );
+                                    if ($post2_cat) {
+                                        $post2_args['cat'] = $post2_cat;
+                                    }
                                     echo module_vdposts($post2_args, 'posts1'); ?>
                                 </div>
                             </div>
-                            <div class="col-md-6 px-1">
+                            <div class="col-md-6 ps-md-1">
                                 <div class="part-post-home-2 p-3 bg-color-theme h-100">
                                     <?php
                                     $post2_args = array(
                                         'post_type' => 'post',
-                                        'cat'       => $post2_cat,
                                         'posts_per_page' => 5,
                                         'offset'    => 1,
                                     );
+                                    if ($post2_cat) {
+                                        $post2_args['cat'] = $post2_cat;
+                                    }
                                     echo module_vdposts($post2_args, 'postslist'); ?>
                                 </div>
                             </div>
@@ -257,56 +263,60 @@ $container = velocitytheme_option('justg_container_type', 'container');
                     </div>
 
                     <?php
-                    $post3_title    = velocitytheme_option('title_posts_home_3', 'Recent Posts');
-                    $post3_cat      = velocitytheme_option('cat_posts_home_3');
+                    $post3_title = velocitytheme_option('title_posts_home_3', 'Recent Posts');
+                    $post3_title = $post3_title ? $post3_title : 'Recent Posts';
+                    $post3_cat = absint(velocitytheme_option('cat_posts_home_3'));
+                    $post3_cat_link = $post3_cat ? get_category_link($post3_cat) : '';
                     ?>
-                    <div class="part_posts_home_3 mt-3 p-1">
+                    <div class="part_posts_home_3 mt-3">
                         <h4 class="widget-title velocity-title text-white mb-3">
-                            <?php if ($post3_cat) : ?>
-                                <span class="d-inline-block bg-color-theme py-1 px-3">
-                                    <a class="text-white" href="<?php echo get_tag_link($post3_cat); ?>"><?php echo $post3_title; ?></a>
-                                </span>
-                            <?php endif; ?>
+                            <span class="d-inline-block bg-color-theme py-1 px-3">
+                                <?php if ($post3_cat && !is_wp_error($post3_cat_link)) : ?>
+                                    <a class="text-white" href="<?php echo esc_url($post3_cat_link); ?>"><?php echo esc_html($post3_title); ?></a>
+                                <?php else : ?>
+                                    <?php echo esc_html($post3_title); ?>
+                                <?php endif; ?>
+                            </span>
                         </h4>
 
-                        <div class="part-post-home-3 p-md-2">
+                        <div class="part-post-home-3">
                             <?php
                             $post3_args = array(
                                 'post_type' => 'post',
-                                'cat'       => $post3_cat,
                                 'posts_per_page' => 1,
                             );
+                            if ($post3_cat) {
+                                $post3_args['cat'] = $post3_cat;
+                            }
                             $post3_query = new WP_Query($post3_args);
 
                             if ($post3_query->have_posts()) :
                                 while ($post3_query->have_posts()) :
                                     $post3_query->the_post(); ?>
-                                    <div class="posts-items row m-0">
-                                        <div class="col-md-6 px-md-1 px-0">
+                                    <div class="posts-items row">
+                                        <div class="col-md-6 pe-md-1 mb-2 mb-md-0">
                                             <div class="border ratio ratio-4x3 mb-2">
-                                                <?php if (has_post_thumbnail()) : ?>
-                                                    <a href="<?php echo get_the_permalink(); ?>">
-                                                        <img src="<?php echo wp_get_attachment_url(get_post_thumbnail_id(), 'medium'); ?>" alt="" loading="lazy">
-                                                    </a>
-                                                <?php endif; ?>
+                                                <?php echo velocity_child_post_thumbnail_html(['size' => 'medium']); ?>
                                             </div>
                                         </div>
-                                        <div class="col-md-6 px-md-1 px-0">
-                                            <div class="border post-text p-3">
+                                        <div class="col-md-6 ps-md-1">
+                                            <div class="border post-text p-2">
                                                 <h5>
                                                     <a class="fw-bold d-block" href="<?php echo get_the_permalink(); ?>"><?php echo get_the_title(); ?></a>
                                                 </h5>
                                                 <div class="post-excerpt mb-2 text-muted">
-                                                    <?php echo vdberita_limit_text(strip_tags(get_the_content()), 12); ?>
+                                                    <?php echo vdberita_limit_text(strip_tags(get_the_content()), 25); ?>
                                                 </div>
                                                 <hr />
                                                 <?php
                                                 $post3sub_args = array(
                                                     'post_type' => 'post',
-                                                    'cat'       => $post3_cat,
                                                     'posts_per_page' => 2,
                                                     'offset'    => 1
                                                 );
+                                                if ($post3_cat) {
+                                                    $post3sub_args['cat'] = $post3_cat;
+                                                }
                                                 $post3sub_query = new WP_Query($post3sub_args);
                                                 if ($post3sub_query->have_posts()) :
                                                     echo '<div class="row m-0">';
@@ -335,16 +345,16 @@ $container = velocitytheme_option('justg_container_type', 'container');
             <?php do_action('justg_after_content'); ?>
         </div><!-- .row -->
 
-        <div class="row m-0 my-3">
-            <div class="col-md-6 p-1"><?php echo get_berita_iklan('iklan_home_bawah_1'); ?></div>
-            <div class="col-md-6 p-1"><?php echo get_berita_iklan('iklan_home_bawah_2'); ?></div>
+        <div class="row my-2">
+            <div class="col-md-6 pe-md-1 my-1"><?php echo get_berita_iklan('iklan_home_bawah_1'); ?></div>
+            <div class="col-md-6 ps-md-1 my-1"><?php echo get_berita_iklan('iklan_home_bawah_2'); ?></div>
         </div>
 
         <div class="velocity-bottom">
-            <div class="row text-start m-0">
+            <div class="row velocity-row text-start">
                 <?php for ($x = 1; $x <= 4; $x++) {
                     if (is_active_sidebar('bottom-sidebar' . $x)) : ?>
-                        <div class="col-md px-1">
+                        <div class="col-md p-md-2">
                             <?php dynamic_sidebar('bottom-sidebar' . $x); ?>
                         </div>
                     <?php endif; ?>

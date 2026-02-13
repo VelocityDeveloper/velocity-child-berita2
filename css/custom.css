@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Slab:wght@400;700&display=swap');
+
 :root {
-    --color-theme: #740106;
+    --color-theme: var(--primary, #740106);
     --bs-body-font-size: .85rem !important;
-    --bs-body-font-family: Arial, Helvetica, sans-serif !important;
+    --bs-body-font-family: 'Roboto', Arial, Helvetica, sans-serif !important;
 }
 :root[data-bs-theme=light] {
     --bs-link-color: #333333 !important;
@@ -46,6 +48,9 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Roboto Slab', serif;
 	font-weight: bold;
 	line-height: 1.4;
+}
+.bi {
+    vertical-align: -0.125em;
 }
 .widget_tabs_berita_2_widget #beritaTabs {
     border-bottom: 2px solid var(--color-theme);
@@ -136,17 +141,24 @@ h1, h2, h3, h4, h5, h6 {
     background-color: var(--color-theme) !important;
     border: none !important;
 }
-.part_iklan_content img {width: 100%;}
+.media-slot img {width: 100%;}
 .module-vdposts-carousel .slick-arrow {
     position: absolute;
     z-index: 99;
     top: 0;
+    bottom: 0;
     height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 !important;
+    line-height: 1;
+    background-color: rgba(0, 0, 0, 0.4);
 }
-.module-vdposts-carousel .slick-arrow > i{
-    height: 100%;
-    position: relative;
-    top: 28px;
+.module-vdposts-carousel .slick-arrow > svg{
+    width: 1.5rem;
+    height: 1.5rem;
+    display: block;
 } 
 .module-vdposts-carousel .prev-arrow {left: 0;}
 .module-vdposts-carousel .next-arrow {right: 0;}
@@ -168,7 +180,6 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 10px;
 }
 .velocity-footer {
-    padding: 20px 20px 0;
     position: relative;
     background-color: #B1BDC4;
     font-size: 13px;
@@ -211,7 +222,6 @@ h1, h2, h3, h4, h5, h6 {
 	right: 100%;
 }
 .velocity-footer {
-	padding: 20px 20px 0;
 	position: relative;
 	background-color: #B1BDC4;
 	font-size: 13px;
@@ -263,6 +273,16 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 7px;
 }
 
+.velocity-row {
+    margin-left: -0.5rem !important;
+    margin-right: -0.5rem !important;
+}
+.velocity-post-row {
+    margin-left: -0.25rem !important;
+    margin-right: -0.25rem !important;
+}
+
+
 @media(min-width: 768px) {
     #wrapper-content > .wrapper {
         padding: 0;
@@ -291,7 +311,9 @@ h1, h2, h3, h4, h5, h6 {
     }
     #primary {
         width: 70%;
+        /*
         padding: 0 10px;
+        */
     }
     #carouselHome .carousel-caption {
         bottom: 0;
@@ -364,15 +386,13 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
-@media(min-width: 1000px) {}
 
 @media(max-width: 768px) {
-    #primary {padding: 0;}
     #carouselHome .carousel-indicators {
         margin-bottom: 0.1rem;
     }
     #wrapper-content > .wrapper {
-        padding: 0 1rem;
+        padding: 0 0.7rem;
     }
     #wrapper-content > .wrapper > #content {
         padding: 1rem;
