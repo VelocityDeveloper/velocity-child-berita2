@@ -171,9 +171,6 @@ h1, h2, h3, h4, h5, h6 {
 .module-vdposts-carousel .next-arrow {right: 0;}
 
 /* Offcanvas dropdown toggle alignment */
-.offcanvas .navbar-nav {
-    flex-wrap: nowrap !important;
-}
 .offcanvas .navbar-nav .dropdown-toggle {
     display: flex;
     align-items: center;
