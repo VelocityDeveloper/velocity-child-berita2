@@ -34,9 +34,9 @@ function module_vdposts($args = null, $style = null)
                             <h5>
                                 <a class="fw-bold d-block" href="<?php echo esc_url(get_the_permalink()); ?>"><?php echo esc_html(get_the_title()); ?></a>
                             </h5>
-                            <?php echo velocity_child_post_meta_html(); ?>
+                            <div class="mb-2"><?php echo velocity_child_post_meta_html(); ?></div>
                             <div class="post-excerpt mb-2 text-muted">
-                                <?php echo esc_html(vdberita_limit_text(strip_tags(get_the_content()), 25)); ?>
+                                <?php echo esc_html(vdberita_limit_text(strip_tags(get_the_content()), 20)); ?>
                             </div>
                         </div>
                     </div>
