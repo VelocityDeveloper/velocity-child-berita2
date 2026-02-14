@@ -345,9 +345,9 @@ $container = velocitytheme_option('justg_container_type', 'container');
             <?php do_action('justg_after_content'); ?>
         </div><!-- .row -->
 
-        <div class="row my-2">
-            <div class="col-md-6 pe-md-1 my-1"><?php echo get_berita_iklan('iklan_home_bawah_1'); ?></div>
-            <div class="col-md-6 ps-md-1 my-1"><?php echo get_berita_iklan('iklan_home_bawah_2'); ?></div>
+        <div class="row my-2 velocity-row">
+            <div class="col-md px-md-2 py-2"><?php echo get_berita_iklan('iklan_home_bawah_1'); ?></div>
+            <div class="col-md px-md-2 py-2"><?php echo get_berita_iklan('iklan_home_bawah_2'); ?></div>
         </div>
 
         <div class="velocity-bottom">

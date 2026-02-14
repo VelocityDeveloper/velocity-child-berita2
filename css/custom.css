@@ -121,6 +121,13 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 100%;
     color: #444 !important;
 }
+#carouselHome .carousel-caption {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    right: inherit;
+    padding-left: 1rem;
+}
 .carousel-indicators {
     top: 20px !important;
     left: 20px !important;
@@ -311,16 +318,6 @@ h1, h2, h3, h4, h5, h6 {
     }
     #primary {
         width: 70%;
-        /*
-        padding: 0 10px;
-        */
-    }
-    #carouselHome .carousel-caption {
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        right: inherit;
-        padding-left: 1rem;
     }
     .navbar-nav > li a:hover {
         text-decoration: none;

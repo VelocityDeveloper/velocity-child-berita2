@@ -45,6 +45,13 @@ $format     = get_post_format() ?: 'standard';
                             <?php echo velocity_child_icon_svg('clock'); ?>
                             <span class="align-middle"><?php echo get_the_date('j F Y, H:i a'); ?></span>
                         </div>
+                        <?php $post_views = velocity_child_get_post_views(); ?>
+                        <?php if ($post_views !== '') : ?>
+                            <div class="px-2 d-inline-block">
+                                <?php echo velocity_child_icon_svg('eye'); ?>
+                                <span class="align-middle"><?php echo esc_html($post_views); ?></span>
+                            </div>
+                        <?php endif; ?>
                         <?php $getcategories = get_the_category(get_the_ID()); ?>
                         <?php if ($getcategories) : ?>
                             <div class="px-2 d-inline-block">
@@ -85,7 +92,6 @@ $format     = get_post_format() ?: 'standard';
                         <div class="pb-3">
                             <?php edit_post_link(__('Edit', 'justg'), '<span class="edit-link">' . velocity_child_icon_svg('pencil-square', 'me-1') . ' ', '</span>'); ?>
                         </div>
-                        <?php get_berita_iklan('iklan_content_2'); ?>
 
                         <?php
                         wp_link_pages(

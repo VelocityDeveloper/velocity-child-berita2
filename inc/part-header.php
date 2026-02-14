@@ -75,9 +75,9 @@
             <?php
             $sosmed = ['facebook', 'twitter', 'instagram', 'youtube'];
             foreach ($sosmed as $key) {
-                $datalink  = velocitytheme_option('link_sosmed_' . $key);
+                $datalink  = velocitytheme_option('link_sosmed_' . $key, 'https://' . $key . '.com/');
                 if ($datalink) {
-                    echo '<a class="btn btn-sm p-1 btn-' . $key . ' ms-1" href="' . $datalink . '" target="_blank">';
+                    echo '<a class="btn btn-sm p-1 btn-' . $key . ' ms-1" href="' . esc_url($datalink) . '" target="_blank">';
                     echo '<img class="rounded-circle" src="' . get_stylesheet_directory_uri() . '/img/icon-' . $key . '.jpg" width="24" height="24">';
                     echo '</a>';
                 }

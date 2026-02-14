@@ -66,14 +66,6 @@ function velocitychild_customize_register($wp_customize)
             'label'       => 'Iklan Home Bawah 2',
             'description' => 'Iklan Halaman Depan Bawah 600x80',
         ],
-        'iklan_home_bawah_3'  => [
-            'label'       => 'Iklan Home Bawah 3',
-            'description' => 'Iklan Halaman Depan Bawah 468x60',
-        ],
-        'iklan_content_2'  => [
-            'label'       => 'Iklan Konten 2',
-            'description' => 'Iklan dalam konten single',
-        ],
     ];
 
     foreach ($fieldiklan as $idfield => $datafield) {
@@ -115,7 +107,7 @@ function velocitychild_customize_register($wp_customize)
 
     $fieldsosmed = [
         'facebook'  => ['label' => 'Facebook'],
-        'twitter'   => ['label' => 'Twitter'],
+        'twitter'   => ['label' => 'X / Twitter'],
         'instagram' => ['label' => 'Instagram'],
         'youtube'   => ['label' => 'Youtube'],
     ];
