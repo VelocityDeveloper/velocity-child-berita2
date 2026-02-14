@@ -28,7 +28,7 @@ $container    = velocitytheme_option('justg_container_type', 'container');
 
                 <?php if (have_posts()) : ?>
                     <header class="page-header block-primary">
-                        <h4 class="fw-bold d-inline-block mb-0"><?php echo wp_kses_post($header_title); ?></h4>
+                        <h1 class="fs-4 fw-bold d-inline-block mb-0"><?php echo wp_kses_post($header_title); ?></h1>
                         <?php if (!empty($header_desc)) : ?>
                             <div class="taxonomy-description"><?php echo wp_kses_post($header_desc); ?></div>
                         <?php endif; ?>

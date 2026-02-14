@@ -15,7 +15,7 @@ defined('ABSPATH') || exit;
         <?php echo justg_breadcrumb(); ?>
     </div>
     <header class="entry-header mb-2">
-        <?php the_title('<h4 class="entry-page-title">', '</h4>'); ?>
+        <?php the_title('<h1 class="fs-4 entry-page-title">', '</h1>'); ?>
     </header><!-- .entry-header -->
 
     <?php echo get_the_post_thumbnail($post->ID, 'large'); ?>

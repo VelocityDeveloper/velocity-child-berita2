@@ -50,17 +50,17 @@ class Tabs_Berita_2_Widget extends WP_Widget
         ?>
 
         <ul class="nav nav-tabs p-0" id="beritaTabs" role="tablist">
-            <li class="nav-item" role="presentation">
+            <li class="nav-item border-0 pb-0" role="presentation">
                 <button class="nav-link p-2 rounded-0 bg-light active" id="popular-tab" data-bs-toggle="tab" data-bs-target="#berita-tab-popular" type="button" role="tab" aria-controls="berita-tab-popular" aria-selected="true">
                     POPULAR
                 </button>
             </li>
-            <li class="nav-item" role="presentation">
+            <li class="nav-item border-0 pb-0" role="presentation">
                 <button class="nav-link p-2 rounded-0 bg-light" id="comments-tab" data-bs-toggle="tab" data-bs-target="#berita-tab-comments" type="button" role="tab" aria-controls="berita-tab-comments" aria-selected="false">
                     COMMENTS
                 </button>
             </li>
-            <li class="nav-item" role="presentation">
+            <li class="nav-item border-0 pb-0" role="presentation">
                 <button class="nav-link p-2 rounded-0 bg-light" id="tags-tab" data-bs-toggle="tab" data-bs-target="#berita-tab-tags" type="button" role="tab" aria-controls="berita-tab-tags" aria-selected="false">
                     TAGS
                 </button>

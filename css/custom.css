@@ -270,14 +270,14 @@ h1, h2, h3, h4, h5, h6 {
 	background-color: #ffffff;
 }
 .widget-area ul, .footer-widget ul {
-	padding:0;
-	margin:0;
+	padding:0 !important;
+	margin:0 !important;
 }
 .widget-area ul li, .footer-widget ul > li {
 	display:block;
 	padding-bottom: 5px;
 	margin-bottom: 5px;
-	border-bottom: 1px dashed #757575;
+	border-bottom: 1px dashed var(--bs-border-color);
 }
 .widget-area ul li {
 	border-bottom: 1px dashed #dbdbdb;
@@ -301,6 +301,27 @@ h1, h2, h3, h4, h5, h6 {
     margin-left: -0.25rem !important;
     margin-right: -0.25rem !important;
 }
+
+.site-main .entry-content h1 {
+    font-size: 21px;
+}
+.site-main .entry-content h2 {
+    font-size: 20px;
+}
+.site-main .entry-content h3 {
+    font-size: 19px;
+}
+.site-main .entry-content h4 {
+    font-size: 18px;
+}
+.site-main .entry-content h5 {
+    font-size: 17px;
+}
+.site-main .entry-content h6 {
+    font-size: 16px;
+}
+
+
 
 
 @media(min-width: 768px) {
