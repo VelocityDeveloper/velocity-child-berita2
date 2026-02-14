@@ -86,7 +86,7 @@
         </div>
     </div>
 
-    <div class="col-3 px-0 align-items-center">
+    <div class="col-3 ps-0 pe-1 align-items-center">
         <div class="search-header float-end">
             <form action="" method="get" id="search">
                 <div class="d-inline-block">
